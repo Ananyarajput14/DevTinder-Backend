@@ -22,7 +22,6 @@ const order=await razorpayInstance.orders.create({
     membershipType: membershipType,
   }
 })
-console.log(order);
 const payment=new Payment({
   orderId: order.id,
   userId: req.user._id,
