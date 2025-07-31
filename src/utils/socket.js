@@ -41,7 +41,7 @@ try{
 
   const connection= await connectionRequestModel.findOne({
     $or:[
-      {formUserID: userId, toUserId: targetUserId , status:"accepted"},
+      {fromUserID: userId, toUserId: targetUserId , status:"accepted"},
       {fromUserID: targetUserId, toUserId: userId, status:"accepted"}
     ]
   })
